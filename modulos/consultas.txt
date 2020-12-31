@@ -1,0 +1,7 @@
+SELECT g.ID, g.NOMBRE FROM `generos` g JOIN `rela_peli_generos` r ON g.ID = r.RELA_GENEROS WHERE r.RELA_PELICULAS=1
+SELECT * FROM `generos` g JOIN `rela_peli_generos` r ON g.ID = r.RELA_GENEROS WHERE r.RELA_PELICULAS=1
+SELECT g.ID, g.NOMBRE FROM `peliculas` g JOIN `rela_peli_generos` r ON g.ID = r.RELA_PELICULAS WHERE r.RELA_GENEROS=1
+SELECT p.ID, p.NOMBRE, p.DESCRIPCION, p.ANIO FROM `peliculas` p JOIN `rela_peli_generos` r ON p.ID = r.RELA_PELICULAS WHERE r.RELA_GENEROS=?
+INSERT INTO `usuarios`(`EMAIL`, `PASSWORD`, `RANGO`, `CREATED`) VALUES ('el_barto@gmail.com','hola123',1,2020-12-31)
+
+SELECT COUNT(*) FROM usuarios WHERE EMAIL='el_barto@gmail.com'
